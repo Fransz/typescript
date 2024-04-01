@@ -1,5 +1,5 @@
 {
-  description = "A Nix-flake-based Node.js development environment";
+  description = "A Nix-flake-based development environment for web using typescript";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
@@ -25,7 +25,7 @@
         ];
       };
     in pkgs.mkShell {
-      name = "vue flake";
+      name = "typescript flake";
 
       # create an environment with nodejs-18_x, pnpm, and yarn
       packages = with pkgs; [
