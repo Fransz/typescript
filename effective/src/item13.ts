@@ -7,8 +7,8 @@
 type AorB = 'a' | 'b';
 
 // An union can appear inside an attribute
-type Input = {};
-type Output = {};
+type Input = { foo: string };
+type Output = { bar: string };
 interface VarMap {
   [name: string]: Input | Output;
 }

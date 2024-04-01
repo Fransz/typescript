@@ -13,15 +13,16 @@ const org = String.prototype.charAt;
  * @returns { string } - The character at the specified index.
  */
 String.prototype.charAt = function (i: number): string {
-  const msg = `This is how it works: this: ${this.valueOf()}, typeof this: ${typeof this}, i: ${i}`;
+  const msg = `This is how it works: this: ${this as string}, typeof this: ${typeof this}, i: ${i}`;
+  console.log(msg);
   console.log(msg);
   return org.call(this, i);
 };
 
 'test'.charAt(1);
 
-let s1: string = 'test';
-let s2: String = new String('test');
+let s1: string = 'test'; // eslint-disable-line prefer-const
+let s2: String = new String('test'); // eslint-disable-line @typescript-eslint/ban-types
 
-s1 = new String('tost');
+// Error: s1 = new String('tost');
 s2 = 'tost';

@@ -10,7 +10,7 @@
  * gebruikt.
  * @param {RequestInfo| URL} input - Where to fetch from
  * @param {RequestInit| undefined} init - Fetch parameters
- * @returns Promise<Response>
+ * @returns {Promise<Response>} - The Response in a promise
  */
 const checkedFetch: typeof fetch = async (input, init) => {
   const response = await fetch(input, init);
@@ -23,7 +23,7 @@ const checkedFetch: typeof fetch = async (input, init) => {
 /**
  * Een fetch die een nummer levert.
  * @param {[ RequestInfo | URL,RequestInit | undefined ]} args - parameters voor fetch
- * @returns Promise<Number>
+ * @returns {Promise<number>} - The number in a promise
  */
 async function checkedNumberFetch(...args: Parameters<typeof fetch>) {
   const response = await checkedFetch(...args);
