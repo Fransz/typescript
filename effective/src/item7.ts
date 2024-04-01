@@ -50,3 +50,9 @@ let a: Car | Computer = { nrWheels: 2 };
 let b: Car & Computer = { nrWheels: 3, memSize: 4 };
 type Ka = keyof (Car | Computer);
 type Kb = keyof (Car & Computer);
+
+let o = { test: 4 };
+// @ts-expect-error
+a = o;
+// @ts-expect-error
+b = o;
