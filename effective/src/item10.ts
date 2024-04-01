@@ -24,5 +24,6 @@ String.prototype.charAt = function (i: number): string {
 let s1: string = 'test'; // eslint-disable-line prefer-const
 let s2: String = new String('test'); // eslint-disable-line @typescript-eslint/ban-types
 
+// @ts-expect-error
 s1 = new String('tost');
 s2 = 'tost';

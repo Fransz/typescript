@@ -9,7 +9,7 @@ interface Room {
   nrDoors: number;
 }
 
-// foutmmelding.
+// @ts-expect-error
 const r: Room = { height: 3.5, nrDoors: 2, elephant: true };
 
 // Ok.
@@ -31,6 +31,7 @@ function createWindow(options: Options) {
 }
 
 // Typescript saves us here.
+// @ts-expect-error
 createWindow({ title: 'window', darkmode: true });
 
 // But here it doesnt
@@ -47,11 +48,14 @@ interface Weak {
 }
 
 // Access property checks. Both error.
+// @ts-expect-error
 const w1: Weak = { prop3: 4 };
+// @ts-expect-error
 const w2: Weak = { prop1: true, prop3: 4 };
 
 // Weaktype checks. Only one errors.
-const o3 = { prop3: 4 };
-const o4 = { prop1: true, prop3: 4 };
-const w3: Weak = o3;
-const w4: Weak = o4;
+const o4 = { prop3: 4 };
+const o5 = { prop1: true, prop3: 4 };
+// @ts-expect-error
+const w3: Weak = o4;
+const w4: Weak = o5;

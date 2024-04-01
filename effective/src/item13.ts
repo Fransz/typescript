@@ -27,6 +27,7 @@ interface myInput extends Input {
   extra: number;
 }
 
+// @ts-expect-error
 interface AorBorC extends AorB {
   c: 'c';
 }
@@ -41,6 +42,7 @@ interface Person {
 }
 
 type TPerson = Person & { age: number }; // Geen foutmelding
+// @ts-expect-error
 interface Iperson extends Person {
   // Foutmelding
   age: number;

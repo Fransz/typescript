@@ -12,11 +12,13 @@ const alice: Person = { name: 'Alice' };
 const bob = { name: 'Bob' } as Person;
 
 // Met assertions is dit mogelijk, met annotations niet.
+// @ts-expect-error
 const charlie: Person = {};
 const denise = {} as Person; // Geen fout, maar die wil je meestal wel.
 
 // Een extra property geeft ook een foutmelding (in een literal), dat wil je meestal.
 // Maar eigenlijk is dit wel geldig.Extra properties zijn toegestaan. Zie excess properties (item 11)
+// @ts-expect-error
 const eve: Person = { name: 'Eve', birthDay: '1963/03/20' };
 const fred = { name: 'Fred', birthDay: '1963/03/20' } as Person;
 
@@ -47,7 +49,8 @@ el = document.querySelector('#myButton')!;
 // Maar de optional chaining operator is preferable. Dat is runtime.
 document.querySelector('#myButton')?.addEventListener('click', (e) => e);
 
-// Assertion naar non-overlapping types.
+// Assertion naar non-overlapping types kan aleen via unknown
 const body = document.body; // HTMLElement
+// @ts-expect-error
 const p: Person = body as Person;
 const pp: Person = body as unknown as Person;

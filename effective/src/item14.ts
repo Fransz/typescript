@@ -11,6 +11,7 @@ interface PartlyImmutable {
 
 const a: PartlyImmutable = { a: 1, b: 2 };
 a.a = 4;
+// @ts-expect-error
 a.b = 2;
 
 interface Mutable {
@@ -22,6 +23,7 @@ interface Mutable {
 type FullyImmutable = Readonly<Mutable>;
 
 const b: FullyImmutable = { a: 1, b: 2, c: [3] };
+// @ts-expect-error
 b.a = 2;
 
 /*
