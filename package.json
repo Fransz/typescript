@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "",
-    "type-check": "",
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
     "lint": "eslint .",
     "format": "prettier --write src/"
   },
