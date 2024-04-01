@@ -1,7 +1,6 @@
 /**
  * item 6; Use Your Editor to Interrogate and Explore the Type System
  * use <M-L>K for hover.
- * @param { string } msg - the message
  */
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
