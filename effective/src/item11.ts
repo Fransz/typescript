@@ -1,5 +1,5 @@
 /**
- * item 10; Distinguish Excess Property Checking from Type Checking
+ * item 11; Distinguish Excess Property Checking from Type Checking
  */
 
 /* eslint-disable @typescript-eslint/no-unused-vars */

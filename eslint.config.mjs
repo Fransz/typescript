@@ -12,7 +12,10 @@ const cfg = tseslint.config(
   ...tseslint.configs.recommendedTypeChecked,
   jsdoc.configs['flat/recommended'],
   {
-    ignores: ['**/*.js', '**/eslint.config.mjs'],
+    ignores: ['**/*.js',
+      '**/item[0-9].ts',
+      '**/item1[0-4].ts',
+      '**/eslint.config.mjs', '**/vitest.config.ts', '**/vite.config.ts'],
   },
   {
     plugins: { jsdoc: jsdoc },
