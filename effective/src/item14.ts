@@ -52,6 +52,7 @@ const dd: readonly Mutable[] = [];
  * @param { number } n - upper limit
  */
 function printTriangles(n: number) {
+  console.log('Incorrect implementation.');
   const nums = [];
   for (let i = 0; i < n; i++) {
     nums.push(i);
@@ -79,6 +80,7 @@ function arraySum(arr: number[]): number {
  * @param { number } n - upper limit
  */
 function printTriangles2(n: number) {
+  console.log('Correct implementation.');
   const nums = [];
   for (let i = 0; i < n; i++) {
     nums.push(i);

@@ -1,5 +1,5 @@
 {
-  "include": ["effective/src/**/item15.ts", "cookbook/src/**/*.ts"],
+  "include": ["effective/src/**/item14.ts", "cookbook/src/**/*.ts"],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
 

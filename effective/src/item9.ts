@@ -11,13 +11,13 @@ interface Person {
 const alice: Person = { name: 'Alice' };
 const bob = { name: 'Bob' } as Person;
 
-// Met assertions is dit mogelijk, met annotations niet.
+// Met assertions is het volgende mogelijk, met annotations niet.
 // @ts-expect-error
 const charlie: Person = {};
 const denise = {} as Person; // Geen fout, maar die wil je meestal wel.
 
 // Een extra property geeft ook een foutmelding (in een literal), dat wil je meestal.
-// Maar eigenlijk is dit wel geldig.Extra properties zijn toegestaan. Zie excess properties (item 11)
+// Maar eigenlijk is dit wel geldig. Extra properties zijn toegestaan. Zie excess properties (item 11)
 // @ts-expect-error
 const eve: Person = { name: 'Eve', birthDay: '1963/03/20' };
 const fred = { name: 'Fred', birthDay: '1963/03/20' } as Person;
@@ -37,7 +37,7 @@ const family: Person[] = ['Mia', 'Regi', 'Kelsey', 'Maire'].map(
 );
 // Let in de regels hierboven op het gebruik van parenthesis om het object.
 
-// Type assertions gebruik je alleen als je zeker weet dat jij het beter weet dan de type inferer
+// Type assertions gebruik je alleen als je zeker weet dat jij het beter weet dan de type inferrer
 document.querySelector('#myButton')?.addEventListener('click', (e) => {
   const button = e.currentTarget as HTMLButtonElement; // e.currentTarget: EventTarget | null
 });

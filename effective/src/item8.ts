@@ -22,7 +22,7 @@ function calcVolume(shape: unknown) {
   }
 }
 
-// It is not easy to tell from the symbol Whether it is in Type or Valuse space.
+// It is not easy to tell from the symbol whether it is in Type or Valuse space.
 type T1 = 'string literal';
 const v1 = 'string literal';
 type T2 = 123;
@@ -49,6 +49,12 @@ class Cylinder2 {
  * calcVolume2
  * @param {unknown} shape - the shape
  */
-function calcVolume2(shape: unknown) {
-  if (shape instanceof Cylinder2) shape.radius; // Cylinder2 is in Value space.
+function calcVolume2(shape: unknown): Cylinder2 | undefined {
+  // cylinder2 is in type space.
+  if (shape instanceof Cylinder2) {
+    // Cylinder2 is in Value space.
+    shape.radius;
+    return shape;
+  }
+  return undefined;
 }

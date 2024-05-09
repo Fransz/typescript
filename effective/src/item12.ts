@@ -6,7 +6,7 @@
 
 /**
  * Een fetch die een error throwed.
- * Het type is hetzelfde als fetch; Er volgt een type fout als je ipv het throw statement abusievelijk een throw
+ * Het type is hetzelfde als fetch; Er volgt een type fout als je ipv het throw statement abusievelijk een return
  * gebruikt.
  * @param {RequestInfo| URL} input - Where to fetch from
  * @param {RequestInit| undefined} init - Fetch parameters

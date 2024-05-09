@@ -16,7 +16,7 @@ interface VarMap {
 // Dit kan niet met een interface
 type NamedVar = (Input | Output) & { name: string };
 
-// Functie types zijn 'natuurijker' als Type
+// Functie types zijn 'natuurlijker' als Type
 type Fn = (s: string) => number;
 interface someI {
   (s: string): number;

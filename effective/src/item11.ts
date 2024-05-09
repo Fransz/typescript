@@ -14,7 +14,7 @@ const r: Room = { height: 3.5, nrDoors: 2, elephant: true };
 
 // Ok.
 const obj = { height: 3.5, nrDoors: 2, elephant: true };
-const rr = obj;
+const rr: Room = obj;
 
 interface Options {
   title: string;
@@ -30,7 +30,7 @@ function createWindow(options: Options) {
   }
 }
 
-// Typescript saves us here.
+// Typescript saves us here, note the typo.
 // @ts-expect-error
 createWindow({ title: 'window', darkmode: true });
 

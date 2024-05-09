@@ -93,7 +93,7 @@ interface NavState {
 type NavState_q = { [K in 'userId' | 'pageTitle' | 'recentFiles']: State[K] };
 
 // Or with a utility type from the stdlib. See item 50 for why this isnt valid typescript.
-// type Pick<T, K extends string | number | symbol> = { [k in K]: T[k] };
+// type MyPick<T, K extends string | number | symbol> = { [k in K]: T[k] };
 type NavState_qq = Pick<State, 'userId' | 'pageTitle' | 'recentFiles'>;
 
 // An example of picking one key from an union of multiple SomeTypes.
@@ -148,12 +148,40 @@ type LongToShort = {
 };
 
 // If you use keyof in your mapped types, the resulting types ar homomorphic;
-// preserving readonly an optional.
+// preserving readonly and optional.
 
 /**
  * typeof operator.
+ * JS has a typeof operator, it reurns the JS type of an expression, as a string.
+ * It can return 'string', 'number', 'boolean', 'object', 'undefined', 'bigint', 'symbol' or 'function'
+ *
+ * TS has a typeof operator, return the TS type of an expression, as a Type.
+ *
+ * The typeof plays a role in type space as well in value space.
  */
+const api = {
+  name: 'frans',
+  age: 61,
+};
+type Api = typeof api;
+
+// This makes sense if the JS object is the single value of truth;
+// This makes sense if you want to create a named type for an inferred type. i.e. from a function value.
 
 /**
- * ReturnType Utility Type.
+ * Some function.
+ * @param { unknown } param - some parameter
+ * @return { object } - The return value
  */
+function test(param: unknown) {
+  /* .... */
+  return {
+    color: 'red',
+    length: 12,
+    well: param,
+  };
+}
+type TheType = ReturnType<typeof test>;
+
+// Typescript also provides Parameters or constructorParameters, for using values a the single source of truth.
+// Note that Parameters or ConstructorParameters return a tupple.

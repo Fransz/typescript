@@ -6,6 +6,7 @@
 
 /* eslint-disable-next-line @typescript-eslint/unbound-method */
 const org = String.prototype.charAt;
+
 /**
  * Show the boxing mechanism in action.
  * The primitive value is boxed, the method is called, and the primitive value is unboxed.
@@ -14,7 +15,6 @@ const org = String.prototype.charAt;
  */
 String.prototype.charAt = function (i: number): string {
   const msg = `This is how it works: this: ${this as string}, typeof this: ${typeof this}, i: ${i}`;
-  console.log(msg);
   console.log(msg);
   return org.call(this, i);
 };
