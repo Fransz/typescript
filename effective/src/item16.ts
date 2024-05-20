@@ -2,6 +2,7 @@
  * Item 16: Prefer More Precise Alternatives to Index Signatures
  */
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * Typescript let you specify flexible mappings, with index signatures.
  */
@@ -23,7 +24,7 @@ const rocket: Rocket = {
  * This mmight be a use case for index signatures but the same downsides apply.
  * U'd better use a Map here.
  * @param { string } input - The input
- * @return { object } - The output
+ * @returns { object } - The output
  */
 function parseCSV(input: string): { [colname: string]: string }[] {
   const lines = input.split('\n');
@@ -42,7 +43,7 @@ function parseCSV(input: string): { [colname: string]: string }[] {
  * Parse a csv string
  * We use a map here; To get an object we need to parse the map.
  * @param { string } input - The input
- * @return Map<string, string>[] - The output
+ * @returns {Map<string, string>[]} - The output
  */
 function parseCSV_(input: string): Map<string, string>[] {
   const lines = input.split('\n');

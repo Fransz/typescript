@@ -171,7 +171,7 @@ type Api = typeof api;
 /**
  * Some function.
  * @param { unknown } param - some parameter
- * @return { object } - The return value
+ * @returns { object } - The return value
  */
 function test(param: unknown) {
   /* .... */
