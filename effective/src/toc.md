@@ -18,3 +18,5 @@
 [Item 18 Type inference and control flow analysis](./item18.ts)
 [Item 19: Use Different Variables for Different Types](./item19.ts)
 [Item 20: Understand How a Variable Gets Its Type](./item20.ts)
+[Item 21: Create objects all at once](./item21.ts)
+[item 22; Understanding type narrowing.](./item22.ts)

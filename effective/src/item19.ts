@@ -27,3 +27,8 @@ id = 12052022;
 // Way better is introducing 2 variables with each a simple type.
 // The union is hard to reason about;
 // You can use const for each variable instead of a single let.
+
+/**
+ * In typescript a variables value can change; 
+ * Its type usually doesn't except in type narrowing.
+ */
